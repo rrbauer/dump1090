@@ -137,7 +137,8 @@ function initialize() {
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		mapTypeControlOptions: {
 			mapTypeIds: mapTypeIds
-		}
+		},
+		scaleControl: true
 	};
 
 	GoogleMap = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
