@@ -704,9 +704,9 @@ int handleHTTPRequest(struct client *c, char *p) {
     }
     
     if (strlen(url) < 2) {
-        snprintf(getFile, sizeof getFile, "%s/gmap.html", HTMLPATH); // Default file
+        snprintf(getFile, sizeof getFile, "%s/gmap.html", Modes.htmlpath); // Default file
     } else {
-        snprintf(getFile, sizeof getFile, "%s/%s", HTMLPATH, url);
+        snprintf(getFile, sizeof getFile, "%s/%s", Modes.htmlpath, url);
     }
 
     // Select the content to send, we have just two so far:

@@ -81,6 +81,7 @@ void modesInitConfig(void) {
     Modes.interactive_display_ttl = MODES_INTERACTIVE_DISPLAY_TTL;
     Modes.fUserLat                = MODES_USER_LATITUDE_DFLT;
     Modes.fUserLon                = MODES_USER_LONGITUDE_DFLT;
+    Modes.htmlpath                = HTMLPATH;
 }
 //
 //=========================================================================
@@ -617,6 +618,8 @@ int main(int argc, char **argv) {
         } else if (!strcmp(argv[j],"--interactive-rtl1090")) {
             Modes.interactive = 1;
             Modes.interactive_rtl1090 = 1;
+        } else if (!strcmp(argv[j],"--htmlpath") && more) {
+            Modes.htmlpath = argv[++j];
         } else {
             fprintf(stderr,
                 "Unknown or not enough arguments for option '%s'.\n\n",

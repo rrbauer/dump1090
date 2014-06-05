@@ -349,6 +349,8 @@ struct {                             // Internal state
     unsigned int stat_DF_Len_Corrected;
     unsigned int stat_DF_Type_Corrected;
     unsigned int stat_ModeAC;
+
+    char *htmlpath;
 } Modes;
 
 // The struct we use to store information about a decoded message.
